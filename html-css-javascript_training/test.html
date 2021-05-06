@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <button id="click-me">Click Me</button>
+    <script>
+    let person={
+        firstname:"Navyashree",
+        lastname:"GB",
+        mailid:"navyashreegb99@gmail.com",
+        greet:function(){
+            console.log("My name is "+this.firstname+" "+this.lastname);
+        }
+    };
+    let count=0;
+    let max=10;
+    for(let count=5;count<max;count++){
+        console.log(count);
+    }
+   
+    let days=['mon','tue','wed','thur','fri','sat','sun'];
+
+    days.forEach(function(day,index){
+        console.log(`day:${day},index:${index}`);
+    });
+
+    window.addEventListener("DOMContentLoaded",function(e){
+        console.log("The page is loaded.");
+   
+
+    let btn=document.querySelector("#click-me");
+    btn.addEventListener("click",function(e){
+        console.log("The button was clicked.");
+    });
+
+    });
+
+    window.addEventListener("orientationchange",function(e){
+        let screen=window.screen;
+        let angle=screen.orientation.angle;
+        let type=screen.orientation.type;
+        console.log(`angle=${angle},type=${type}`);
+    });
+
+
+    </script>
+    
+</body>
+</html>

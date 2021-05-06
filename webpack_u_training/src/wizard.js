@@ -1,0 +1,1 @@
+export const wizard="WIZARD FILE FGHHJKL;"
